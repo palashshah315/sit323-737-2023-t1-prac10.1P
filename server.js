@@ -250,6 +250,6 @@ app.get('/', function (req, res) {
 });
 
 // Start server
-app.listen(3000, function () {
-    console.log('Server started on port 3000');
+app.listen(7000, function () {
+    console.log('Server started on port 7000');
 });

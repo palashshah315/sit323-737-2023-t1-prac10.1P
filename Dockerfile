@@ -1,7 +1,7 @@
 FROM node:14
-WORKDIR /task7.2C
+WORKDIR /task10.2HD
 COPY package*.json ./
 RUN npm install
 COPY server.js .
-EXPOSE 3000
+EXPOSE 7000
 CMD ["node", "server.js"]

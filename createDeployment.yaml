@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: palashnehalbhaishah310501
+  name: palash10.2D
   labels:
-    app: myapp
+    app: myapp10.2D
     tier: frontend
 spec:
   # modify replicas according to your case
@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: mynode
-        image: palash315/palashnehalbhaishah315
+        image: palash315/docker_d
         ports:
         - containerPort: 8080
