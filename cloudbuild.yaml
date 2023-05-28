@@ -3,4 +3,4 @@ steps:
   args: ['build', '-t', 'australia-southeast1-gcr.io/$PROJECT_ID/palash315/docker_d', '.', '-f', 'Dockerfile']
 
 - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', 'australia-southeast1-gcr.io/$PROJECT_ID/palash315/docker_d']
+  args: ['push', 'australia-southeast1-gcr.io/$PROJECT_ID/palash315/docker_d']
