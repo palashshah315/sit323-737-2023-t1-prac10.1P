@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'australia-southeast1-gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d', '.']
+  args: ['build', '-t', 'australia-southeast1-gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d:$COMMIT_SHA', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', 'australia-southeast1-gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d']
+   args: ['push', 'australia-southeast1-gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d:$COMMIT_SHA']
