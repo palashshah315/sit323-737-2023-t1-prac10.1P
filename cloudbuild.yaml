@@ -1,16 +1,6 @@
 steps:
-# Build Docker Image
-- name: 'gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d'
-  args: ['build', '-t', 'gcr.io/${PROJECT_ID}/palash315/docker_d:$COMMIT_SHA', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'australia-southeast1-gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d', '.']
 
-
-# Docker Push
-- name: 'gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d'
-  args: ['push', 'gcr.io/${PROJECT_ID}/palash315/docker_d:$COMMIT_SHA']
-
-
-- name: 'gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d'
-  args: ['set', 'image', 'palash315/docker_d', 'mynode=gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d:$COMMIT_SHA']
-  env:
-  - 'CLOUDSDK_COMPUTE_ZONE=australia-southeast1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
+name: 'gcr.io/cloud-builders/docker'
+   args: ['push', 'australia-southeast1-gcr.io/sit737-23t1-shah-ddcd0bc/palash315/docker_d']
